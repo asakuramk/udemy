@@ -18,8 +18,16 @@ driver = webdriver.Chrome()
 driver.get(url)
 
 sleep(2)
-login_button = driver.find_element(By.XPATH, value='//*[text()="Log in"]')
+login_button = driver.find_element(By.XPATH, value='//*[@id="details-button"]')
 login_button.click()
+
+
+sleep(2)
+login_button = driver.find_element(By.XPATH, value='//*[@id="proceed-link"]')
+login_button.click()
+
+//変更OK？
+
 
 sleep(2)
 fb_login = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div[1]/div/div[3]/span/div[2]/button')
